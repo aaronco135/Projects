@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+<body onload="showName()">
+
+    <button onclick="Emp()">Employees Page</button>
+    <button onclick="">Departement Page</button>
+    <button onclick="">Edit Departement Page</button>
+    <button onclick="">New Departement Page</button>
+    <button onclick="">Shift Page</button>
+    <button onclick="">Users Page</button><br><br>
+    <button onclick="Logout()">Log Out</button>
+
+    <script>
+         const nameFromPage1 = sessionStorage.getItem('nameFromPage1');
+
+        function showName() {
+            const h2 = document.createElement('h2')
+            document.body.appendChild(h2)
+            h2.innerText = "Hello "+ nameFromPage1 + " !"
+
+        }
+        function  Emp(){
+                sessionStorage.setItem('sendname',nameFromPage1)
+                window.location.href='emppage.html'
+            }
+
+            function Logout(){
+                window.location.href='loginpage.html'
+            }
+    </script>
+</body>
+
+</html>

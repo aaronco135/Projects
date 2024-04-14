@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    Enter your username <input type="text" id="name"><br>
+    Enter your email<input type="text" id="email"><br>
+    <button onclick="login()">login</button>
+ <script>
+ async function login(){
+
+    const name = document.getElementById("name").value
+    const email = document.getElementById("email").value
+
+
+    const resp = await fetch('http://localhost:8000/users')
+    const data = await  resp.json()
+       
+    //console.log(data)
+    const check = data.find(user => user.username === name && user.email === email)
+    console.log(check)
+    if(check){
+        console.log("login !")
+        const fullName = check.name
+        sessionStorage.setItem('nameFromPage1', fullName);
+       // sessionStorage.setItem('fullData', data);
+      window.location.href = 'mainpage.html';
+    }
+    else console.log("wrong !")
+        
+
+    }
+
+ </script>
+</body>
+
+</html>

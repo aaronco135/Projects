@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <button onclick="Save()">Save</button><br/>
+        <button onclick="ComeBack()">Cancel</button><br/>
+        <input type="text">
+       Enter First Name : <input type="text" id="fname">
+       Enter Last Name : <input type="text" id="lname">
+       Enter Department ID :  <input type="number" id="depID">
+        <script>
+
+const fname = document.getElementById('fname').value
+const lname = document.getElementById('lname').value
+const depID= document.getElementById('depID').value
+
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
+
+const obj = {FirstName: fname,
+     LastName : lname,
+     StartWorkYear:currentYear,
+     DepartmentID:depID}
+function ComeBack(){
+
+    window.location.href="emppage.html"
+}
+function Save(){
+
+}
+        </script>
+    </body>
+</html>

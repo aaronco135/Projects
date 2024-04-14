@@ -1,0 +1,96 @@
+<html>
+
+<body onload="showName()">
+    <table border="1" id="table"> </table>
+    <button onclick="NewEmp()">New Employee</button><br>
+
+
+    <script>
+
+    
+        // add scroll down Department & condition
+
+        async function getData(url) {
+            const resp = await fetch(url)
+            return data = await resp.json()
+            return data
+        }
+
+        function showName() {
+            const h2 = document.createElement('h2')
+            document.body.appendChild(h2)
+            const nameFromPage1 = sessionStorage.getItem('nameFromPage1');
+            h2.innerText = "Hello " + nameFromPage1 + " !"
+        }
+
+
+
+        // data = sessionStorage.getItem('fullData')
+        //console.log(nameData)
+        const table = document.getElementById('table');
+
+
+        for (let i = 0; i < 10; i++) {
+            let tr = document.createElement("tr");
+            table.appendChild(tr);
+            for (let j = 0; j < 3; j++) {
+
+                let td = document.createElement("td");
+                tr.appendChild(td);
+
+                if (j === 0) {
+
+                    let a = document.createElement('a')
+            
+                    a.href = 'editemp.html'
+                    td.appendChild(a);
+
+                    getData('http://localhost:8000/users').then(parm => {
+                        a.innerText = parm[i].name
+
+                        a.onclick = ()=> {
+                        Onclick(parm[i],'FromPageEmp');
+                    };
+                    })
+                }
+
+                if (j === 1) {
+                    let a = document.createElement('a')
+
+                    a.href = 'editdep.html'
+                    td.appendChild(a);
+
+                    getData('http://localhost:8000/dep').then(parm => {
+                        a.innerText = parm[i].name
+
+                        a.onclick = ()=> {
+                        Onclick(parm[i],'FromPageDep');
+                    };
+                    })
+                }
+                if (j === 2) {
+                    getData('http://localhost:8000/sft').then(parm => {
+                        td.innerText = parm[i].time + ' ' + parm[i].startingHour + ' ' + parm[i].endingHour
+                    })
+                }
+            }
+        }
+        function Onclick(data,key){
+
+            const obj = JSON.stringify(data)
+            sessionStorage.setItem(key,obj);
+        }
+
+        function NewEmp() {
+            window.location.href = "newemp.html"
+        }
+
+        function EditEmp() {
+            window.location.href = "editemp.html"
+        }
+
+        
+    </script>
+</body>
+
+</html>
