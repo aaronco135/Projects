@@ -1,0 +1,60 @@
+/* Container principal */
+.home-page {
+    background-color: #121212;
+    color: #f0f0f0;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* Titre principal */
+  .home-page h2 {
+    font-size: 2.2rem;
+    color: #00ffc3;
+    margin-bottom: 20px;
+  }
+  
+  /* Texte de bienvenue */
+  .home-page p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Bloc des balances */
+  .balances-container {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.08);
+    margin-bottom: 30px;
+  }
+  
+  .balances-container h4 {
+    margin-bottom: 10px;
+    color: #00ff9e;
+  }
+  
+  .balances-container p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* Bouton navigation */
+  .navigate-button {
+    background-color: #00ff9e;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .navigate-button:hover {
+    background-color: #00e68a;
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,117 @@
+/* Reset minimal */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  /* Conteneur principal */
+  .trading-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* Titre principal */
+  .trading-container h2 {
+    font-size: 2rem;
+    color: #00ffc3;
+    margin-bottom: 20px;
+  }
+  
+  /* Carte d'actif sélectionné */
+  .asset-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.1);
+  }
+  
+  /* Boutons d'achat / vente */
+  .asset-card button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .asset-card button:hover {
+    transform: scale(1.05);
+  }
+  
+  .asset-card button:first-of-type {
+    background-color: #0f0;
+    color: #000;
+    margin-right: 10px;
+  }
+  
+  .asset-card button:last-of-type {
+    background-color: #ff3333;
+    color: #fff;
+  }
+  
+  /* Input de montant */
+  .asset-card input[type='number'] {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+  }
+  
+  /* Historique */
+  .transaction-history {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #333;
+  }
+  
+  .transaction-history h3 {
+    margin-bottom: 15px;
+    color: #00bfff;
+  }
+  
+  .transaction-history ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .transaction-history li {
+    margin-bottom: 10px;
+    background-color: #242424;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #00ffc3;
+  }
+  
+  /* Chart margin */
+  .candle-chart {
+    margin-top: 20px;
+  }
+  
+  /* Horloge */
+  .clock-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0d0d0d;
+    color: #00ffcc;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+    z-index: 1000;
+  }
+  
